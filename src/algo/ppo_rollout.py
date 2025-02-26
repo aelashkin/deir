@@ -1,10 +1,10 @@
-import gym
+import gymnasium as gym
 import numpy as np
 import time
 import torch as th
 import wandb
 
-from gym_minigrid.minigrid import Key, Door, Goal
+from minigrid.core.world_object import Key, Door, Goal
 
 from matplotlib import pyplot as plt
 
@@ -54,7 +54,7 @@ class PPORollout(BaseAlgorithm):
         max_grad_norm: float,
         use_sde: bool,
         sde_sample_freq: int,
-        policy_base: Type[BasePolicy] = ActorCriticPolicy,
+        policy_base: Type[BasePolicy] = ActorCriticPolicy,  # This argument is causing the issue
         policy_kwargs: Optional[Dict[str, Any]] = None,
         verbose: int = 0,
         seed: Optional[int] = None,
@@ -69,10 +69,11 @@ class PPORollout(BaseAlgorithm):
         local_logger: Optional[LocalLogger] = None,
         use_wandb: bool = False,
     ):
+        # Remove 'policy_base' from the call to the parent constructor
         super(PPORollout, self).__init__(
             policy=policy,
             env=env,
-            policy_base=policy_base,
+            # policy_base=policy_base,  # Remove this line
             learning_rate=learning_rate,
             policy_kwargs=policy_kwargs,
             verbose=verbose,
@@ -82,6 +83,9 @@ class PPORollout(BaseAlgorithm):
             support_multi_env=True,
             seed=seed,
         )
+        # Store policy_base as an instance variable if you need it elsewhere
+        self.policy_base = policy_base
+        
         self.run_id = run_id
         self.n_steps = n_steps
         self.batch_size = batch_size

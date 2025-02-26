@@ -99,3 +99,4 @@ def init_module_with_name(n: str, m: nn.Module, fn: Callable[['Module'], None] =
             fn(m)
         th.manual_seed(run_id)
     return m
+

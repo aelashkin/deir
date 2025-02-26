@@ -1,8 +1,8 @@
 import numpy as np
 import torch as th
 
-from gym import spaces
-from gym.spaces import Dict
+from gymnasium import spaces
+from gymnasium.spaces import Dict
 from typing import Generator, Optional, Union
 
 from stable_baselines3.common.buffers import BaseBuffer

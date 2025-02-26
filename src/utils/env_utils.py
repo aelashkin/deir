@@ -4,7 +4,7 @@ from typing import Any, Callable, Dict, Optional, Type, Union, Sequence
 import multiprocessing as mp
 
 import envpool
-import gym
+import gymnasium as gym
 import numpy as np
 
 from stable_baselines3.common.env_util import make_vec_env

@@ -2,7 +2,7 @@ import torch as th
 import wandb
 import warnings
 
-from gym import spaces
+from gymnasium import spaces
 from torch import Tensor
 
 from src.utils.loggers import StatisticsLogger, LocalLogger

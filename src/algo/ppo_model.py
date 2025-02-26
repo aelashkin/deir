@@ -1,5 +1,6 @@
-import gym
+import gymnasium as gym
 import numpy as np
+
 
 from src.algo.intrinsic_rewards.deir import DiscriminatorModel
 from src.algo.intrinsic_rewards.icm import ICMModel

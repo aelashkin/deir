@@ -6,10 +6,10 @@ mutual information term proposed in DEIR is disabled.
 For readability, part of code used solely for logging and analysis is omitted.
 """
 
-import gym
+import gymnasium as gym
 import numpy as np
 
-from gym import spaces
+from gymnasium import spaces
 from numpy.random import Generator
 from typing import Dict, Any, List
 from stable_baselines3.common.preprocessing import get_obs_shape
