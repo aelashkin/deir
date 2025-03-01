@@ -256,19 +256,21 @@ class GymnasiumPPOTrainer(PPOTrainer):
 def main():
     total_timesteps = 100000
     eval_episodes = 100
-    env_id = "MiniGrid-Empty-Random-6x6-v0"  # Farama’s Minigrid environment ID (gymnasium API)
+    env_id = "MiniGrid-Empty-Random-6x6-v0"
 
-    # Create a vectorized environment using gymnasium’s SyncVectorEnv.
+    # Create a vectorized environment using SB3's DummyVecEnv
     def make_env():
         def _init():
             env = gym.make(env_id)
             return env
         return _init
-    num_envs = 1  # single env for training; you can increase as needed
-    vec_env = SyncVectorEnv([make_env() for _ in range(num_envs)])
+    num_envs = 1  # single env for training
     
-    # Instantiate our DEIR agent using GymnasiumPPOTrainer and PPOModel.
-    # Here we use standard hyperparameters and 100,000 timesteps.
+    # Replace SyncVectorEnv with DummyVecEnv
+    from stable_baselines3.common.vec_env import DummyVecEnv
+    vec_env = DummyVecEnv([make_env for _ in range(num_envs)])
+    
+    # Rest of your code remains the same...
     model = GymnasiumPPOTrainer(
         policy=PPOModel,
         env=vec_env,
