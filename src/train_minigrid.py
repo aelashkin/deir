@@ -261,14 +261,19 @@ def main():
     # Create a vectorized environment using SB3's DummyVecEnv
     def make_env():
         def _init():
-            env = gym.make(env_id)
+            env = gym.make("MiniGrid-Empty-Random-6x6-v0")  # Replace with your env_id
+            print(f"Observation space: {env.observation_space}")
             return env
         return _init
     num_envs = 1  # single env for training
-    
+
+        # In your main function, before creating DummyVecEnv:
+    env = make_env()()
+    print(f"Single environment observation space: {env.observation_space}")
+        
     # Replace SyncVectorEnv with DummyVecEnv
     from stable_baselines3.common.vec_env import DummyVecEnv
-    vec_env = DummyVecEnv([make_env for _ in range(num_envs)])
+    vec_env = DummyVecEnv([make_env() for _ in range(num_envs)])
     
     # Rest of your code remains the same...
     model = GymnasiumPPOTrainer(
