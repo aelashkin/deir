@@ -1,0 +1,2 @@
+[console_scripts]
+deir-train = src.train:main

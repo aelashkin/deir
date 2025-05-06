@@ -7,7 +7,7 @@ from typing import Type
 
 from stable_baselines3.common.torch_layers import BaseFeaturesExtractor
 
-from src.utils.enum_types import NormType
+from utils.enum_types import NormType
 
 
 class CustomCnnFeaturesExtractor(BaseFeaturesExtractor):

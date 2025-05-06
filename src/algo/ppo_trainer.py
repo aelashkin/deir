@@ -5,9 +5,9 @@ import warnings
 from gym import spaces
 from torch import Tensor
 
-from src.utils.loggers import StatisticsLogger, LocalLogger
-from src.algo.ppo_rollout import PPORollout
-from src.utils.enum_types import ModelType
+from utils.loggers import StatisticsLogger, LocalLogger
+from algo.ppo_rollout import PPORollout
+from utils.enum_types import ModelType
 
 from stable_baselines3.common.base_class import BaseAlgorithm
 from stable_baselines3.common.policies import ActorCriticPolicy

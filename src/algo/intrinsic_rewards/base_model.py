@@ -7,10 +7,10 @@ from typing import Dict, Any, List
 from stable_baselines3.common.preprocessing import preprocess_obs
 from stable_baselines3.common.torch_layers import NatureCNN, BaseFeaturesExtractor
 
-from src.algo.common_models.gru_cell import CustomGRUCell
-from src.algo.common_models.mlps import *
-from src.utils.enum_types import NormType
-from src.utils.common_func import init_module_with_name
+from algo.common_models.gru_cell import CustomGRUCell
+from algo.common_models.mlps import *
+from utils.enum_types import NormType
+from utils.common_func import init_module_with_name
 
 
 class IntrinsicRewardBaseModel(nn.Module):

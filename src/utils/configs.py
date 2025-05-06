@@ -11,14 +11,14 @@ from stable_baselines3.common.env_util import make_vec_env
 from stable_baselines3.common.vec_env import VecMonitor
 from datetime import datetime
 
-from src.algo.common_models.cnns import BatchNormCnnFeaturesExtractor, LayerNormCnnFeaturesExtractor, \
+from algo.common_models.cnns import BatchNormCnnFeaturesExtractor, LayerNormCnnFeaturesExtractor, \
     CnnFeaturesExtractor
-from src.env.subproc_vec_env import CustomSubprocVecEnv
-from src.utils.enum_types import EnvSrc, NormType, ModelType
+from env.subproc_vec_env import CustomSubprocVecEnv
+from utils.enum_types import EnvSrc, NormType, ModelType
 from wandb.integration.sb3 import WandbCallback
 
-from src.utils.loggers import LocalLogger
-from src.utils.video_recorder import VecVideoRecorder
+from utils.loggers import LocalLogger
+from utils.video_recorder import VecVideoRecorder
 
 
 class TrainingConfig():

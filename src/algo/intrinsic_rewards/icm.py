@@ -3,10 +3,10 @@ from typing import Dict, Any
 
 from gym import spaces
 from stable_baselines3.common.torch_layers import NatureCNN, BaseFeaturesExtractor
-from src.algo.intrinsic_rewards.base_model import IntrinsicRewardBaseModel
-from src.algo.common_models.mlps import *
-from src.utils.enum_types import NormType
-from src.utils.loggers import StatisticsLogger
+from algo.intrinsic_rewards.base_model import IntrinsicRewardBaseModel
+from algo.common_models.mlps import *
+from utils.enum_types import NormType
+from utils.loggers import StatisticsLogger
 
 
 class ICMModel(IntrinsicRewardBaseModel):

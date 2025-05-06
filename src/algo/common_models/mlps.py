@@ -4,7 +4,7 @@ from torch import Tensor, nn
 from torch.nn import functional as F
 from typing import Type, Tuple, Optional
 
-from src.utils.enum_types import NormType
+from utils.enum_types import NormType
 
 
 class PolicyValueOutputHeads(nn.Module):

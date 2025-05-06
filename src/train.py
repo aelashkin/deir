@@ -3,10 +3,10 @@ import warnings
 import torch as th
 
 # noinspection PyUnresolvedReferences
-from src.env.minigrid_envs import *
-from src.algo.ppo_model import PPOModel
-from src.algo.ppo_trainer import PPOTrainer
-from src.utils.configs import TrainingConfig
+from env.minigrid_envs import *
+from algo.ppo_model import PPOModel
+from algo.ppo_trainer import PPOTrainer
+from utils.configs import TrainingConfig
 from stable_baselines3.common.utils import set_random_seed
 
 warnings.filterwarnings("ignore", category=DeprecationWarning)

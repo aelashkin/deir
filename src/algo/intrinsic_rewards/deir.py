@@ -16,9 +16,9 @@ from stable_baselines3.common.preprocessing import get_obs_shape
 from stable_baselines3.common.torch_layers import NatureCNN, BaseFeaturesExtractor
 from stable_baselines3.common.utils import obs_as_tensor
 
-from src.algo.intrinsic_rewards.base_model import IntrinsicRewardBaseModel
-from src.algo.common_models.mlps import *
-from src.utils.enum_types import NormType
+from algo.intrinsic_rewards.base_model import IntrinsicRewardBaseModel
+from algo.common_models.mlps import *
+from utils.enum_types import NormType
 
 
 class DiscriminatorModel(IntrinsicRewardBaseModel):

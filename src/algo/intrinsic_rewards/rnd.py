@@ -1,11 +1,11 @@
 import gym
 from typing import Dict, Any
 from stable_baselines3.common.torch_layers import NatureCNN, BaseFeaturesExtractor
-from src.algo.intrinsic_rewards.base_model import IntrinsicRewardBaseModel
-from src.algo.common_models.mlps import *
-from src.utils.common_func import normalize_rewards
-from src.utils.enum_types import NormType
-from src.utils.running_mean_std import RunningMeanStd
+from algo.intrinsic_rewards.base_model import IntrinsicRewardBaseModel
+from algo.common_models.mlps import *
+from utils.common_func import normalize_rewards
+from utils.enum_types import NormType
+from utils.running_mean_std import RunningMeanStd
 
 
 class RNDModel(IntrinsicRewardBaseModel):

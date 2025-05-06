@@ -1,17 +1,17 @@
 import gym
 import numpy as np
 
-from src.algo.intrinsic_rewards.deir import DiscriminatorModel
-from src.algo.intrinsic_rewards.icm import ICMModel
-from src.algo.intrinsic_rewards.ngu import NGUModel
-from src.algo.intrinsic_rewards.noveld import NovelDModel
-from src.algo.intrinsic_rewards.plain_forward import PlainForwardModel
-from src.algo.intrinsic_rewards.plain_inverse import PlainInverseModel
-from src.algo.intrinsic_rewards.rnd import RNDModel
-from src.algo.common_models.gru_cell import CustomGRUCell
-from src.algo.common_models.mlps import *
-from src.utils.common_func import init_module_with_name
-from src.utils.enum_types import ModelType, NormType
+from algo.intrinsic_rewards.deir import DiscriminatorModel
+from algo.intrinsic_rewards.icm import ICMModel
+from algo.intrinsic_rewards.ngu import NGUModel
+from algo.intrinsic_rewards.noveld import NovelDModel
+from algo.intrinsic_rewards.plain_forward import PlainForwardModel
+from algo.intrinsic_rewards.plain_inverse import PlainInverseModel
+from algo.intrinsic_rewards.rnd import RNDModel
+from algo.common_models.gru_cell import CustomGRUCell
+from algo.common_models.mlps import *
+from utils.common_func import init_module_with_name
+from utils.enum_types import ModelType, NormType
 
 from stable_baselines3.common.policies import ActorCriticCnnPolicy
 from stable_baselines3.common.preprocessing import preprocess_obs

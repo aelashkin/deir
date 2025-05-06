@@ -8,9 +8,9 @@ from typing import Generator, Optional, Union
 from stable_baselines3.common.buffers import BaseBuffer
 from stable_baselines3.common.vec_env import VecNormalize
 
-from src.algo.buffers.type_aliases import RolloutBufferSamples
-from src.utils.common_func import normalize_rewards
-from src.utils.running_mean_std import RunningMeanStd
+from algo.buffers.type_aliases import RolloutBufferSamples
+from utils.common_func import normalize_rewards
+from utils.running_mean_std import RunningMeanStd
 
 
 class PPORolloutBuffer(BaseBuffer):

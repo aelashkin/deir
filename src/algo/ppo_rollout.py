@@ -8,10 +8,10 @@ from gym_minigrid.minigrid import Key, Door, Goal
 
 from matplotlib import pyplot as plt
 
-from src.algo.buffers.ppo_buffer import PPORolloutBuffer
-from src.utils.loggers import StatisticsLogger, LocalLogger
-from src.utils.common_func import set_random_seed
-from src.utils.enum_types import ModelType, EnvSrc
+from algo.buffers.ppo_buffer import PPORolloutBuffer
+from utils.loggers import StatisticsLogger, LocalLogger
+from utils.common_func import set_random_seed
+from utils.enum_types import ModelType, EnvSrc
 
 from stable_baselines3.common.base_class import BaseAlgorithm
 from stable_baselines3.common.callbacks import BaseCallback

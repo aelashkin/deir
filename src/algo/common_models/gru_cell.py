@@ -4,7 +4,7 @@ from torch import Tensor
 from torch.nn import RNNCellBase
 from typing import Optional
 
-from src.utils.enum_types import NormType
+from utils.enum_types import NormType
 
 
 class CustomGRUCell(RNNCellBase):
