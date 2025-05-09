@@ -4,8 +4,8 @@ import time
 import torch as th
 import wandb
 from torch import nn
-from gym_minigrid.wrappers import ImgObsWrapper, FullyObsWrapper, ReseedWrapper
-from procgen import ProcgenEnv
+from minigrid.wrappers import ImgObsWrapper, FullyObsWrapper, ReseedWrapper
+# from procgen import ProcgenEnv
 from stable_baselines3.common.callbacks import CallbackList
 from stable_baselines3.common.env_util import make_vec_env
 from stable_baselines3.common.vec_env import VecMonitor
@@ -99,15 +99,15 @@ class TrainingConfig():
                 n_envs=self.num_processes,
                 monitor_dir=self.log_dir,
             )
-        elif self.env_source == EnvSrc.ProcGen:
-            venv = ProcgenEnv(
-                num_envs=self.num_processes,
-                env_name=self.env_name,
-                rand_seed=self.run_id,
-                num_threads=self.procgen_num_threads,
-                distribution_mode=self.procgen_mode,
-            )
-            venv = VecMonitor(venv=venv)
+        # elif self.env_source == EnvSrc.ProcGen:
+        #     venv = ProcgenEnv(
+        #         num_envs=self.num_processes,
+        #         env_name=self.env_name,
+        #         rand_seed=self.run_id,
+        #         num_threads=self.procgen_num_threads,
+        #         distribution_mode=self.procgen_mode,
+        #     )
+        #     venv = VecMonitor(venv=venv)
         else:
             raise NotImplementedError
 

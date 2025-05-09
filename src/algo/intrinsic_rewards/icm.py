@@ -1,7 +1,7 @@
-import gym
+import gymnasium as gym # type: ignore
+from gymnasium import spaces # type: ignore
 from typing import Dict, Any
 
-from gym import spaces
 from stable_baselines3.common.torch_layers import NatureCNN, BaseFeaturesExtractor
 from algo.intrinsic_rewards.base_model import IntrinsicRewardBaseModel
 from algo.common_models.mlps import *

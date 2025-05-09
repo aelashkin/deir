@@ -1,10 +1,10 @@
-import gym
+import gymnasium as gym
 import numpy as np
 import time
 import torch as th
 import wandb
 
-from gym_minigrid.minigrid import Key, Door, Goal
+from minigrid.core.world_object import Goal, Door, Key
 
 from matplotlib import pyplot as plt
 

@@ -4,10 +4,13 @@ The code was created based on the official implementation of gym-minigrid
 (version 1.0.3) and may differ from the latest version.
 """
 
-from gym_minigrid.envs import DoorKeyEnv
-from gym_minigrid.minigrid import MiniGridEnv, Grid, Goal, Door, Key, Wall, COLOR_NAMES, DIR_TO_VEC, Ball, Box
-from gym_minigrid.register import register
-from gym_minigrid.roomgrid import RoomGrid
+from minigrid.envs import DoorKeyEnv
+from minigrid.minigrid_env import MiniGridEnv
+from minigrid.core.grid import Grid
+from minigrid.core.world_object import Goal, Door, Key, Ball, Box, Wall
+from minigrid.core.constants import COLOR_NAMES, DIR_TO_VEC
+from minigrid import register
+from minigrid.core.roomgrid import RoomGrid
 
 
 class CustomDoorKeyEnv(MiniGridEnv):

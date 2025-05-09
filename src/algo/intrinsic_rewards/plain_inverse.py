@@ -1,8 +1,8 @@
-import gym
+import gymnasium as gym
 from typing import Dict, Any
 
 import numpy as np
-from gym import spaces
+from gymnasium import spaces
 from stable_baselines3.common.torch_layers import NatureCNN, BaseFeaturesExtractor
 from algo.intrinsic_rewards.base_model import IntrinsicRewardBaseModel
 from algo.common_models.mlps import *

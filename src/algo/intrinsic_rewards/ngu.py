@@ -6,11 +6,11 @@ more lightweight than the originally proposed one. However, we confirmed that ev
 step of the original algorithm for intrinsic reward generation was followed in 
 our reproduction (according to the original definition given in NGU’s paper).
 """
-import gym
+import gymnasium as gym
 from typing import Dict, Any
 
 import numpy as np
-from gym import spaces
+from gymnasium import spaces
 from stable_baselines3.common.torch_layers import NatureCNN, BaseFeaturesExtractor
 from algo.intrinsic_rewards.base_model import IntrinsicRewardBaseModel
 from algo.common_models.mlps import *

@@ -1,7 +1,7 @@
-import gym
+import gymnasium as gym
 import torch as th
 
-from gym.spaces import Dict
+from gymnasium.spaces import Dict
 from torch import nn, Tensor
 from typing import Type
 

@@ -1,7 +1,7 @@
 import warnings
 from typing import Callable, List, Optional, Union, Sequence, Dict
 
-import gym
+import gymnasium as gym
 import numpy as np
 from numpy import ndarray
 from stable_baselines3.common.vec_env import SubprocVecEnv, VecTransposeImage
